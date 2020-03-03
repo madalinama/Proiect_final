@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1583186951 source:c:\c++\loto\main.cpp
+	<iostream>
+	"stdlib.h"
+	"Loto.h"
+	"CreatorTalon.h"
+
+1581873031 source:c:\c++\loto\src\loto.cpp
+	"Loto.h"
+	<iostream>
+	<time.h>
+	<cmath>
+
+1581870465 c:\c++\loto\include\loto.h
+	<vector>
+
+1581800689 source:c:\c++\loto\src\talon.cpp
+	"Talon.h"
+	<vector>
+
+1582456077 c:\c++\loto\include\talon.h
+	<vector>
+
+1583186942 source:c:\c++\loto\src\creatortalon.cpp
+	"CreatorTalon.h"
+	<vector>
+	<iostream>
+	<time.h>
+	<cmath>
+
+1583187374 c:\c++\loto\include\creatortalon.h
+	<vector>
+
