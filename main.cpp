@@ -2,12 +2,16 @@
 #include "stdlib.h"
 #include "Loto.h"
 #include "CreatorTalon.h"
+#include <time.h>
+#include "Talon.h"
 
 using namespace std;
 
 void Meniu()
 {
     system("CLS");
+    cout<<"******** Loto 6/49 *******"<<endl;
+    cout<<endl;
     cout<<"Alegeti optiunea dorita:"<<endl;
     cout<<endl;
     cout<<"1.Inregistreaza talon de joc"<<endl;
@@ -20,36 +24,31 @@ void Meniu()
 
 int main()
 {
-    CreatorTalon creaza_talon;
-    Meniu();
+    Loto loto;
     unsigned int opt=1;
     while (opt!=0)
     {
+        Meniu();
         cin>>opt;
-            if (opt<=0 ||opt>=7)
-                cout<<"Optiunea introdusa nu este valida! Va rugam introduceti o optiune valida!"<<endl;
-            else
-        system("CLS");
-        switch (opt)
+        if (opt<=0 ||opt>=7)
         {
-            case 1:creaza_talon.inregistreaza_talon();break;
-            case 2:{//int n;
-                   // cout<<"Cate taloane doriti sa generati?"<<endl;
-                  //  cin>>n;
-                  //  for (int k=0; k<n; k++)
-                        {creaza_talon.generare_numere();};
-                    }
+            cout<<"Optiunea introdusa nu este valida! Va rugam introduceti o optiune valida!"<<endl;
         }
-
+        else
+        {
+            switch (opt)
+            {
+                case 1:loto.inregistrare_talon_user();system("Pause");break;
+                case 2:system("CLS");loto.inregistrare_talon_generat();system("Pause");break;
+                case 3:system("CLS");loto.AfiseazaTaloane();system("Pause");break;
+                case 4:system("CLS");loto.extragere_numere_castigatoare();system("Pause");break;
+                case 5:system("CLS");loto.StergeTaloane();system("Pause");break;
+                case 0:exit(0);
+            }
+        }
+        system("CLS");
     }
 
-Loto a;
-a.numere_norocoase();
-cout<<endl;
-//CreatorTalon creaza_talon;
-//creaza_talon.inregistreaza_talon();
-cout<<endl;
-creaza_talon.generare_numere();
 
 return 0;
 }

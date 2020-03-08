@@ -31,3 +31,79 @@
 1583187374 c:\c++\loto\include\creatortalon.h
 	<vector>
 
+1583697955 source:c:\c++\proiect_final loto\main.cpp
+	<iostream>
+	"stdlib.h"
+	"Loto.h"
+	"CreatorTalon.h"
+	<time.h>
+	"Talon.h"
+
+1583697841 c:\c++\proiect_final loto\include\loto.h
+	<vector>
+	"CreatorTalon.h"
+	"Talon.h"
+
+1583445571 c:\c++\proiect_final loto\include\creatortalon.h
+	<vector>
+
+1583696218 source:c:\c++\proiect_final loto\src\loto.cpp
+	"Loto.h"
+	<iostream>
+	<time.h>
+	<cmath>
+	"CreatorTalon.h"
+	"Talon.h"
+	<vector>
+	<string>
+
+1583696623 source:c:\c++\proiect_final loto\src\talon.cpp
+	"Talon.h"
+	<vector>
+	<iostream>
+
+1583696623 c:\c++\proiect_final loto\include\talon.h
+	<vector>
+	<iostream>
+	<string>
+
+1583696218 source:c:\c++\proiect_final loto\src\creatortalon.cpp
+	"CreatorTalon.h"
+	<vector>
+	<iostream>
+	<time.h>
+	<cmath>
+
+1583697955 source:c:\c++\proiect_final\main.cpp
+	<iostream>
+	"stdlib.h"
+	"Loto.h"
+	"CreatorTalon.h"
+	<time.h>
+	"Talon.h"
+
+1583697841 c:\c++\proiect_final\include\loto.h
+	<vector>
+	"CreatorTalon.h"
+	"Talon.h"
+
+1583445571 c:\c++\proiect_final\include\creatortalon.h
+	<vector>
+
+1583696623 c:\c++\proiect_final\include\talon.h
+	<vector>
+	<iostream>
+	<string>
+
+1583696218 source:c:\c++\proiect_final\src\creatortalon.cpp
+	"CreatorTalon.h"
+	<vector>
+	<iostream>
+	<time.h>
+	<cmath>
+
+1583696623 source:c:\c++\proiect_final\src\talon.cpp
+	"Talon.h"
+	<vector>
+	<iostream>
+
