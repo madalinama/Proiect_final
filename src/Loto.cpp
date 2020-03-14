@@ -62,22 +62,25 @@ void Loto::extragere_numere_castigatoare()
             if (gasit == 6){
                 cout<<endl;
                 cout << "Talon cu 6 numere castigatoare: " << endl;
+                cout<<endl;
                 vectorTaloane[i].AfiseazaTalon("castigator");
             }
             if (gasit == 5){
+                cout<<endl;
                 cout << "Talon cu 5 numere castigatoare: " << endl;
                 vectorTaloane[i].AfiseazaTalon("castigator");
             }
             if (gasit== 4){
+                cout<<endl;
                 cout << "Talon cu 4 numere castigatoare: " << endl;
                 vectorTaloane[i].AfiseazaTalon("castigator");
             }
         }
-    cout<<endl;
-    if (gasit<4){
-        cout<<"Nu exista taloane castigatoare!"<<endl;
-    }
-    cout<<endl;
+            if (gasit<4){
+                cout<<endl;
+                cout<<"Nu exista taloane castigatoare!"<<endl;
+            }
+            cout<<endl;
 }
 
 void Loto:: AfiseazaTaloane()

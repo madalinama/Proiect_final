@@ -17,7 +17,7 @@ std::vector<int> CreatorTalon::alege_numere()
     {
         int n;
         cin >> n;
-        if (cin.fail()){
+        while (cin.fail()){
             throw "Nu ati introdus un numar! Talon Invalid!";
         }
         while (n<1||n >49)
