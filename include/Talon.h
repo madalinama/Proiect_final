@@ -18,9 +18,6 @@ class Talon
         int ComparTalon(Talon t);
         virtual ~Talon();
 
-
-    protected:
-
     private:
          std::vector<int>numere;
          std::string Nume, Prenume;

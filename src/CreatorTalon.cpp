@@ -9,20 +9,24 @@ using namespace std;
 CreatorTalon::CreatorTalon(){srand(time(NULL));}
 
 std::vector<int> CreatorTalon::alege_numere()
- {
-     system("CLS");
-     cout<<"Introduceti 6 numere distincte intre 1 si 49!"<<endl;
-     for(int i = 0; i < 6;)
+{
+    system("CLS");
+    std::vector<int>numere_user_temp;
+    cout<<"Introduceti 6 numere distincte intre 1 si 49!"<<endl;
+    for(int i = 0; i < 6;)
     {
         int n;
         cin >> n;
+        if (cin.fail()){
+            throw "Nu ati introdus un numar! Talon Invalid!";
+        }
         while (n<1||n >49)
-                 {cout<<"Numarul introdus nu este valid! Introduceti un numar valid!"<<endl;
-                  cin>>n;
-                 }
+            {cout<<"Numarul introdus nu este valid! Introduceti un numar valid!"<<endl;
+            cin>>n;
+            }
         bool unic = false;
         for(int j = 0; j < i; j++)
-            if(n == numere_user[j])
+            if(n == numere_user_temp[j])
             {
                 unic = true;
                 cout<<"Acest numar a fost deja introdus! Introduceti un numar nou!"<<endl;
@@ -30,18 +34,19 @@ std::vector<int> CreatorTalon::alege_numere()
             }
         if(!unic)
         {
-            numere_user.push_back (n);
+            numere_user_temp.push_back (n);
             i++;
         }
     }
     cout<<endl;
-    cout<<"Primul numar introdus este:      "<<numere_user[0]<<endl;
-    cout<<"Al doilea numar introdus este:   "<<numere_user[1]<<endl;
-    cout<<"Al treilea numar introdus este:  "<<numere_user[2]<<endl;
-    cout<<"Al patrulea numar introdus este: "<<numere_user[3]<<endl;
-    cout<<"Al cincelea numar introdus este: "<<numere_user[4]<<endl;
-    cout<<"Al saselea numar introdus este:  "<<numere_user[5]<<endl;
-return numere_user;
+    cout<<"Primul numar introdus este:      "<<numere_user_temp[0]<<endl;
+    cout<<"Al doilea numar introdus este:   "<<numere_user_temp[1]<<endl;
+    cout<<"Al treilea numar introdus este:  "<<numere_user_temp[2]<<endl;
+    cout<<"Al patrulea numar introdus este: "<<numere_user_temp[3]<<endl;
+    cout<<"Al cincelea numar introdus este: "<<numere_user_temp[4]<<endl;
+    cout<<"Al saselea numar introdus este:  "<<numere_user_temp[5]<<endl;
+    system("PAUSE");
+return numere_user_temp;
  }
 
 
@@ -50,19 +55,19 @@ std::vector<int> CreatorTalon::generare_numere()
     std::vector<int>numere_user_temp;
     bool unic;
     int numar_random = 0;
-      for (int i = 0; i<6; ++i)
-      {
-          do {
-                unic = false;
-                numar_random =rand()%49+1;
-                for (int j = 0; j<i; ++j) {
-                    if (numere_user_temp[j]==numar_random) {
-                        unic=true;
-                        break;
-                    }
+    for (int i = 0; i<6; ++i)
+    {
+        do{
+            unic = false;
+            numar_random =rand()%49+1;
+            for (int j = 0; j<i; ++j) {
+                if (numere_user_temp[j]==numar_random){
+                    unic=true;
+                    break;
                 }
-          } while(unic);
-          numere_user_temp.push_back(numar_random);
+            }
+        }while(unic);
+            numere_user_temp.push_back(numar_random);
      }
 return numere_user_temp;
 }

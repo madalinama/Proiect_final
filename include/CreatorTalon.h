@@ -12,9 +12,6 @@ class CreatorTalon
         std::vector<int> alege_numere ();
         std::vector<int> generare_numere();
 
-
-    protected:
-
     private:
         std::vector<int>numere_user;
         bool verificare_numere_duplicate();

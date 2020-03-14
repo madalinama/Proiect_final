@@ -20,6 +20,13 @@ void Meniu()
     cout<<"4.Extragere numere castigatoare"<<endl;
     cout<<"5.Stergere taloane"<<endl;
     cout<<"0.Iesire"<<endl;
+    cout<<endl;
+}
+
+void SubMeniu()
+{
+    system("CLS");
+    cout<<"1.Revenire la ecranul anterior!"<<endl;
 }
 
 int main()
@@ -38,7 +45,12 @@ int main()
         {
             switch (opt)
             {
-                case 1:loto.inregistrare_talon_user();system("Pause");break;
+                case 1:{try
+                        {loto.inregistrare_talon_user();}
+                            catch (const char *ex){
+                            cout<<ex<<endl;system("Pause");break;
+                            cin.clear();
+                            cin.ignore(1,'\n');}};break;
                 case 2:system("CLS");loto.inregistrare_talon_generat();system("Pause");break;
                 case 3:system("CLS");loto.AfiseazaTaloane();system("Pause");break;
                 case 4:system("CLS");loto.extragere_numere_castigatoare();system("Pause");break;

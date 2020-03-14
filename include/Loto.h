@@ -16,9 +16,6 @@ class Loto
         void AfiseazaTaloane();
         void StergeTaloane();
 
-
-    protected:
-
     private:
        std::vector <Talon> talon_castigator;
        CreatorTalon creaza_talon;
