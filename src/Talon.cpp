@@ -4,8 +4,6 @@
 using namespace std;
 
 
-//Talon::Talon(vector<int> talon_user):numere(talon_user) {}
-
 Talon::Talon(string nume,string prenume,vector<int> talon_user):Nume(nume),Prenume(prenume),numere(talon_user) {}
 
 int Talon::ComparTalon(Talon t){

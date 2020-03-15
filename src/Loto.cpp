@@ -6,12 +6,16 @@
 #include "Talon.h"
 #include <vector>
 #include <string>
+#include <fstream>
+#include <sstream>
+
 using namespace std;
 
 Loto::Loto()
 {
     //ctor
 }
+
 
 void Loto::inregistrare_talon_user()
 {
@@ -81,6 +85,12 @@ void Loto::extragere_numere_castigatoare()
                 cout<<"Nu exista taloane castigatoare!"<<endl;
             }
             cout<<endl;
+    cout<<"Doriti sa vedeti rezultatele pentru toate taloanele? (d/n) "<<endl;
+    char r;
+    cin>>r;
+    if (r=='d'){
+        AfiseazaTaloane();
+    }
 }
 
 void Loto:: AfiseazaTaloane()
@@ -90,8 +100,25 @@ void Loto:: AfiseazaTaloane()
         for (int j=0; j<6; j++)
         cout<<vectorTaloane[i].GetNumere()[j]<<" ";
         cout<<endl;
-        cout<<"*******************************************"<<endl;
+        cout<<"*****************************************"<<endl;
     }
+}
+
+void Loto:: SalveazaTaloane()
+{
+    ofstream TaloaneUserFile;
+    TaloaneUserFile.open("TaloaneLoto.txt");
+    for (int i = 0; i < vectorTaloane.size(); i++){
+        TaloaneUserFile<<endl<<"Talon " << i+1 << ": "<< vectorTaloane[i].GetNume()<<" "<<vectorTaloane[i].GetPrenume()<<": ";
+        for (int j=0; j<6; j++)
+        TaloaneUserFile<<vectorTaloane[i].GetNumere()[j]<<" ";
+    }
+    TaloaneUserFile.close();
+}
+
+void Loto::CitireFisier()
+{
+
 }
 
 void Loto::StergeTaloane()

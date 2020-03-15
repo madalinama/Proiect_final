@@ -26,12 +26,17 @@ void Meniu()
 void SubMeniu()
 {
     system("CLS");
-    cout<<"1.Revenire la ecranul anterior!"<<endl;
+    cout<<"1.Revenire la ecranul anterior! (d/n)"<<endl;
+    char r;
+    cin>>r;
+    if (r=='d'){
+        Meniu();
+    }
 }
-
 int main()
 {
     Loto loto;
+    loto.CitireFisier();
     unsigned int opt=1;
     while (opt!=0)
     {
@@ -45,23 +50,24 @@ int main()
         {
             switch (opt)
             {
-                case 1:{try{
+                case 1:{system("CLS");SubMeniu();
+                        try{
                             loto.inregistrare_talon_user();}
                             catch (const char *ex){
                             cout<<ex<<endl;system("Pause");
                             cin.clear();
-                            cin.ignore(1,'\n');}
-                        };break;
-                case 2:system("CLS");loto.inregistrare_talon_generat();system("Pause");break;
-                case 3:system("CLS");loto.AfiseazaTaloane();system("Pause");break;
-                case 4:system("CLS");loto.extragere_numere_castigatoare();system("Pause");break;
-                case 5:system("CLS");loto.StergeTaloane();system("Pause");break;
+                            cin.ignore(1,'\n');
+                            }
+                        };system("Pause");break;
+                case 2:system("CLS");SubMeniu();loto.inregistrare_talon_generat();system("Pause");break;
+                case 3:system("CLS");SubMeniu();loto.AfiseazaTaloane();system("Pause");break;
+                case 4:system("CLS");SubMeniu();loto.extragere_numere_castigatoare();system("Pause");break;
+                case 5:system("CLS");SubMeniu();loto.StergeTaloane();system("Pause");break;
                 case 0:exit(0);
             }
         }
         system("CLS");
     }
-
-
+    loto.SalveazaTaloane();
 return 0;
 }

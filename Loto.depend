@@ -74,7 +74,7 @@
 	<time.h>
 	<cmath>
 
-1584204051 source:c:\c++\proiect_final\main.cpp
+1584294352 source:c:\c++\proiect_final\main.cpp
 	<iostream>
 	"stdlib.h"
 	"Loto.h"
@@ -82,32 +82,32 @@
 	<time.h>
 	"Talon.h"
 
-1584052805 c:\c++\proiect_final\include\loto.h
+1584289707 c:\c++\proiect_final\include\loto.h
 	<vector>
 	"CreatorTalon.h"
 	"Talon.h"
 
-1584051386 c:\c++\proiect_final\include\creatortalon.h
+1584282104 c:\c++\proiect_final\include\creatortalon.h
 	<vector>
 
-1584202848 c:\c++\proiect_final\include\talon.h
+1584282104 c:\c++\proiect_final\include\talon.h
 	<vector>
 	<iostream>
 	<string>
 
-1584209151 source:c:\c++\proiect_final\src\creatortalon.cpp
+1584294667 source:c:\c++\proiect_final\src\creatortalon.cpp
 	"CreatorTalon.h"
 	<vector>
 	<iostream>
 	<time.h>
 	<cmath>
 
-1583696623 source:c:\c++\proiect_final\src\talon.cpp
+1584282104 source:c:\c++\proiect_final\src\talon.cpp
 	"Talon.h"
 	<vector>
 	<iostream>
 
-1584206450 source:c:\c++\proiect_final\src\loto.cpp
+1584289743 source:c:\c++\proiect_final\src\loto.cpp
 	"Loto.h"
 	<iostream>
 	<time.h>
@@ -116,4 +116,6 @@
 	"Talon.h"
 	<vector>
 	<string>
+	<fstream>
+	<sstream>
 

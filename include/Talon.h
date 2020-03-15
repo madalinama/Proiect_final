@@ -9,7 +9,6 @@ class Talon
 {
     public:
 
-        //Talon(std::vector<int> talon_user);
         Talon(std::string, std::string, std::vector<int> talon_user);
         std::string GetNume () {return Nume;};
         std::string GetPrenume () {return Prenume;};

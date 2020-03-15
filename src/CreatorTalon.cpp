@@ -17,7 +17,7 @@ std::vector<int> CreatorTalon::alege_numere()
     {
         int n;
         cin >> n;
-        while (cin.fail()){
+        if (cin.fail()){
             throw "Nu ati introdus un numar! Talon Invalid!";
         }
         while (n<1||n >49)
@@ -45,7 +45,6 @@ std::vector<int> CreatorTalon::alege_numere()
     cout<<"Al patrulea numar introdus este: "<<numere_user_temp[3]<<endl;
     cout<<"Al cincelea numar introdus este: "<<numere_user_temp[4]<<endl;
     cout<<"Al saselea numar introdus este:  "<<numere_user_temp[5]<<endl;
-    system("PAUSE");
 return numere_user_temp;
  }
 
@@ -72,7 +71,7 @@ std::vector<int> CreatorTalon::generare_numere()
 return numere_user_temp;
 }
 
-
+/*
 bool CreatorTalon:: verificare_numere_duplicate()
 
 {
@@ -87,7 +86,7 @@ bool CreatorTalon:: verificare_numere_duplicate()
     }
 return unic;
 }
-
+*/
 
 CreatorTalon::~CreatorTalon()
 {
