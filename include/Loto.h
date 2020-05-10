@@ -15,7 +15,7 @@ class Loto
         void inregistrare_talon_generat ();
         void AfiseazaTaloane();
         void StergeTaloane();
-        void SalveazaTaloane();
+        void SalveazaTaloaneFisier();
         void CitireFisier();
     private:
        std::vector <Talon> talon_castigator;

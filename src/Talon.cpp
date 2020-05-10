@@ -20,7 +20,7 @@ int Talon::ComparTalon(Talon t){
 
 void Talon::AfiseazaTalon(string tip)
 {
-    for (int i=0;i<6;i++){}
+    for (int i=0;i<6;i++)
     cout<<endl;
     cout<<"Primul numar " << tip << " este:      "<<numere[0]<<endl;
     cout<<"Al doilea numar " << tip << " este:   "<<numere[1]<<endl;

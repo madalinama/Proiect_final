@@ -12,7 +12,7 @@ std::vector<int> CreatorTalon::alege_numere()
 {
     system("CLS");
     std::vector<int>numere_user_temp;
-    cout<<"Introduceti 6 numere distincte intre 1 si 49!"<<endl;
+    cout<<"Introduceti 6 numere distincte intre 1 si 49 sau 0 pentru a reveni la ecranul anterior!"<<endl;
     for(int i = 0; i < 6;)
     {
         int n;
@@ -20,6 +20,8 @@ std::vector<int> CreatorTalon::alege_numere()
         if (cin.fail()){
             throw "Nu ati introdus un numar! Talon Invalid!";
         }
+        if (n==0)
+            void Menu();
         while (n<1||n >49)
             {cout<<"Numarul introdus nu este valid! Introduceti un numar valid!"<<endl;
             cin>>n;

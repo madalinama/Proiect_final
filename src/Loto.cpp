@@ -64,7 +64,7 @@ void Loto::extragere_numere_castigatoare()
         {
             gasit = vectorTaloane[i].ComparTalon(talonCastigator);
             if (gasit == 6){
-                cout<<endl;
+             //   cout<<endl;
                 cout << "Talon cu 6 numere castigatoare: " << endl;
                 cout<<endl;
                 vectorTaloane[i].AfiseazaTalon("castigator");
@@ -104,20 +104,32 @@ void Loto:: AfiseazaTaloane()
     }
 }
 
-void Loto:: SalveazaTaloane()
+void Loto:: SalveazaTaloaneFisier()
 {
     ofstream TaloaneUserFile;
     TaloaneUserFile.open("TaloaneLoto.txt");
+    if (TaloaneUserFile.is_open()){
     for (int i = 0; i < vectorTaloane.size(); i++){
         TaloaneUserFile<<endl<<"Talon " << i+1 << ": "<< vectorTaloane[i].GetNume()<<" "<<vectorTaloane[i].GetPrenume()<<": ";
         for (int j=0; j<6; j++)
         TaloaneUserFile<<vectorTaloane[i].GetNumere()[j]<<" ";
-    }
+    }}
     TaloaneUserFile.close();
 }
 
 void Loto::CitireFisier()
 {
+    ifstream TaloaneUserFile("TaloaneLoto.txt");
+    while (!TaloaneUserFile.eof()){
+        char buff[100];
+        int i,a,b,c,d,e,f;
+        string nume,prenume;
+        TaloaneUserFile.getline(buff,100);
+        stringstream ss;
+        ss<<buff;
+        ss>>i>>a>>b>>c>>d>>e>>f;
+        cout<<"Talon"<<i<<":"<<nume<<" "<<" "<<prenume<<" "<<":"<<a<<" "<<b<<" "<<c<<" "<<d<<" "<<e<<" "<<f;
+    }
 
 }
 
